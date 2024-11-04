@@ -1,4 +1,12 @@
+const config = require(`./configs/tailwind/${process.env.BRAND}.js`);
+
 export default {
-    content: ['./components/**/*.{vue,js,ts}'],
-    theme: import(`./configs/tailwind/${process.env.BRAND}`),
+    content: [
+        './components/**/*.{vue,js}',
+        './layouts/**/*.vue',
+        './pages/**/*.vue',
+        './plugins/**/*.{js,ts}',
+        './nuxt.config.{js,ts}',
+    ],
+    theme: config,
 };
